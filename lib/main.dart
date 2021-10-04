@@ -62,98 +62,183 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: const Color(0xff0500FF),
       appBar: AppBar(
-        title: const Text('abc'),
+        title: Image.asset('Logo.png', fit: BoxFit.cover),
         elevation: 0.0,
         backgroundColor: const Color(0xff0500FF),
         actions: <Widget>[
-          Row(
-            children: <Widget>[
-              TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
+          Container(
+            height: 100,
+            padding: const EdgeInsets.fromLTRB(5, 5, 2, 2),
+            decoration: const BoxDecoration(
+              color: Color(0xffffffff),
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+            ),
+            child: Row(
+              children: <Widget>[
+                TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle:
+                        const TextStyle(fontSize: 14, color: Color(0xff000000)),
+                    primary: const Color(0xff000000),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Problem'),
                 ),
-                onPressed: () {},
-                child: const Text('Problem'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle:
+                        const TextStyle(fontSize: 14, color: Color(0xff000000)),
+                    primary: const Color(0xff000000),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Solution'),
                 ),
-                onPressed: () {},
-                child: const Text('Solution'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle:
+                        const TextStyle(fontSize: 14, color: Color(0xff000000)),
+                    primary: const Color(0xff000000),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Manifesto'),
                 ),
-                onPressed: () {},
-                child: const Text('Manifesto'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle:
+                        const TextStyle(fontSize: 14, color: Color(0xff000000)),
+                    primary: const Color(0xff000000),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Stories'),
                 ),
-                onPressed: () {},
-                child: const Text('Stories'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    textStyle:
+                        const TextStyle(fontSize: 14, color: Color(0xff000000)),
+                    primary: const Color(0xff000000),
+                  ),
+                  onPressed: () {},
+                  child: const Text('Contact'),
                 ),
-                onPressed: () {},
-                child: const Text('Contact'),
-              ),
-              OutlinedButton(
-                onPressed: () {
-                  print('Received click');
-                },
-                child: const Text('Click Me'),
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 20)),
-                onPressed: () {},
-                child: const Text('Enabled'),
-              ),
-            ],
+              ],
+            ),
           ),
           Row(
             children: <Widget>[
               TextButton(
                 style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
+                  textStyle:
+                      const TextStyle(fontSize: 14, color: Color(0xffffffff)),
+                  primary: const Color(0xffffffff),
                 ),
                 onPressed: () {},
                 child: const Text('Login'),
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    textStyle: const TextStyle(fontSize: 20)),
+                    textStyle: const TextStyle(
+                      fontSize: 10,
+                    ),
+                    primary: const Color(0xff000000),
+                    shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5)))),
                 onPressed: () {},
-                child: const Text('Register'),
+                child: const Text('Request early access'),
+              ),
+              const SizedBox(
+                width: 20,
               ),
             ],
           )
         ],
       ),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the  this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        const Text(
+                          'Conosci persone interessanti, \n rafforza il tuo network e cresci \n come professionista',
+                          style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        const Text(
+                          'Con zwap puoi farlo anche tu. \n Solo 30 minuti a settimana per conoscere \n persone interessanti in video meeting 1 to 1.',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5))),
+                          child: Ink(
+                            decoration: BoxDecoration(
+                                gradient: const LinearGradient(colors: [
+                                  Color.fromARGB(240, 224, 224, 224),
+                                  Color(0xfffafafa)
+                                ]),
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Container(
+                              width: 150,
+                              height: 50,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                'Request early access',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xff0500FF),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column()
+                  ],
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset('amer.png'),
+                    Image.asset('bubbble.png'),
+                    Image.asset('enhance.png'),
+                    Image.asset('webpath.png'),
+                    Image.asset('mediator.png'),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
